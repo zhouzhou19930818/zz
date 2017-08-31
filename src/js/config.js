@@ -1,0 +1,13 @@
+require.config({
+    //解决缓存问题
+    urlArgs:'v='+Math.random(),
+    //baseUrl:'js',
+    paths:{
+        jquery:'../lib/jquery-3.2.1',
+        lxzoom:'../lib/jquery.lxzoom/jquery/lxzoom',
+        jqueryui:'../lib/jquery-ui-1.12.1/jquery-yi'
+    },
+    shim:{
+        jquery:['jquery']
+    }
+});
