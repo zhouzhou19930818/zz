@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <title>首页</title>
+    <style type="text/css">
+        ul,li,html,body,div{margin:0;padding:0;}
+        ul{list-style: none;padding:0;margin:0;}
+        .carousel{position:relative;width:770px;height:400px;overflow:hidden;}
+        .carousel ul{position:absolute;top:0;left:0;overflow: hidden;width:3240px;}
+        .carousel ul li{float:left;}
+        .carousel img{display:block;height:400px;width:770px;}
+        .carousel>span{position:absolute;left:10px;top:50%;margin-top:-30px;width:30px;height:60px;line-height:60px;text-align:center;background-color: rgba(0,0,0,0.2);color:#fff;display:none;}
+        .carousel:hover span{display:inline-block;}
+        .carousel>.next{left:auto;right:10px;color:#0fc;cursor:pointer;}
+        .carousel>.prev{right:auto;left:10px;color:#0fc;z-index: 1000;cursor:pointer;}
+        .carousel .page{position:absolute;left:380px;bottom:28px;transform:translate(-50%,0);}
+        .carousel .page span{display:inline-block;margin:0 5px;width:20px;height:20px;line-height: 20px;text-align:center;background-color: rgba(255,255,255,0.8);border-radius:50%;cursor:pointer;}
+        .carousel .page span.active{background-color: #0fc;} 
+        </style>
 </head>
 <body>
     <div>
@@ -13,7 +28,12 @@
                     <li>
                         <div>
                             <span>送货至</span>
-                            <span><strong>广东</strong></span>
+                            <span>
+                                <strong>
+                                广东
+                                <i class="iconfont" id="arrows_1">&#xe600;</i>
+                                </strong>
+                            </span>
                             <ul>
                                 <li></li>
                                 <li></li>
@@ -35,26 +55,45 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#" id="login">请登陆</a>&nbsp;&nbsp;<a href="#">注册</a></li>
-                    <li><a href="#">我的订单</a></li>
-                    <li><a href="#">我的1药网</a></li>
-                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#" id="login">请登陆</a></li>
+                    <li><span><a href="#" id="reg">注册</a></span></li>
+                    <li><span><a href="#">我的订单</a></span></li>
+                    <li class="li_1">
+                        <a href="#" id="myyaowang">
+                        我的1药网
+                        <div class="div_1">
+                            <ul>
+                                <li>我的优惠卷</li>
+                                <li>我的收藏夹</li>
+                                <li>商品评论</li>
+                                <li>我的私人订制</li>
+                            </ul>
+                        </div>
+                        </a>
+                        <i class="iconfont" id="arrows_2">&#xe600;</i>
+                    </li>
+                    <li><span  id="help"><a href="#">帮助中心</a></span></li>
                     <li><span class="phone">400-007-0958</span></li>
-                    <li><a href="#">手机APP</a></li>
+                    <li>
+                        <a href="#">
+                        <i class="iconfont" id="phone1">&#xe648;</i>
+                        手机APP
+                        </a>
+                    </li>
                 </ul>
             </header>
-            <img src="images/img1/2.jpg"/>
-            <div>
-                <div>
+                    <img src="images/img1/2.jpg"/>
+            <div class="box_1">
+                <div class="picture">
                     <a href="#">
                         <img src="images/img1/1.jpg"/>
                     </a>
                 </div>
                 <div>
                     <div>
-                        <input type="text" value="请输入商品名、症状、人群等"/>
-                        <button>
-                            <i>放大镜</i>
+                        <input type="text" value="请输入商品名、症状、人群等" class="put_1"/>
+                        <button class="btn_1">
+                            <i class="iconfont" id="zoom">&#xe634;</i>
                         </button>
                     </div>
                     <p class="p1">
@@ -67,17 +106,436 @@
                         <a href="#">视康隐形眼镜</a>
                     </p>
                 </div>
-                <div>
+                <div class="picture_1">
                     <img src="images/img1/4.jpg"/>
                 </div>
-                <a href="#">
-                    <i>图</i>
+                <a href="#" class="carslist">
+                    <i class="iconfont" id="car">&#xe513;</i>
                     <span>购物车</span>
                 </a>
             </div>
+<!--             <div>
+                <i class="iconfont">&#xe634;</i>
+                <i class="iconfont">&#xe620;</i>
+                
+                <i class="iconfont">&#xe607;</i>
+                
+                
+                <i class="iconfont">&#xe64b;</i>
+                <i class="iconfont">&#xe600;</i>
+                <i class="iconfont">&#xe648;</i>
+                <i class="iconfont">&#xe8e7;</i>
+                <i class="iconfont">&#xe6e5;</i>
+                <i class="iconfont">&#xea27;</i>
+                <i class="iconfont">&#xe661;</i>
+                
+                <i class="iconfont">&#xe709;</i>
+                <i class="iconfont">&#xe611;</i>
+                
+                <i class="iconfont">&#xe501;</i>
+                <i class="iconfont">&#xe61a;</i>
+                
+                <i class="iconfont">&#xe513;</i>
+            </div> -->
+        <!-- 开始轮播图 -->
+            <main>
+                <div class="dv_1">
+                    <a href="#" class="a1">所有商品分类</a>
+                    <div class="dv_11">
+                        <ul class="ul_1">
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xe633;</i>中西药品</a>
+                                <div class="div_2">
+                                    <div class="div_21">
+                                       <!--  <dl>
+                                            <dt>
+                                                <p>男性疾病</p>
+                                                <dd>
+                                                    <span><a href="#">阳痿早泄</a></span>
+                                                    <span><a href="#">男性不孕症</a></span>
+                                                    <span><a href="#">前列腺炎</a></span>
+                                                    <span><a href="#">肾病</a></span>
+                                                    <span><a href="#">泌尿系统疾病</a></span>
+                                                    <span><a href="#">补肾</a></span>
+                                                </dd>
+                                            </dt>
+                                        </dl> -->
+                                        <!-- <dl>
+                                            <dt>
+                                                滋润补养
+                                                <dd><span></span>补血补气</dd>
+                                                <dd><span></span>补肾壮阳</dd>
+                                                <dd><span></span>减肥瘦身</dd>
+                                                <dd><span></span>增强抵抗力</dd>
+                                                <dd><span></span>安眠助眠</dd>
+                                                <dd><span></span>免疫调节</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                心脑血管
+                                                <dd><span></span>高血压</dd>
+                                                <dd><span></span>脑血管病</dd>
+                                                <dd><span></span>冠心病</dd>
+                                                <dd><span></span>高血脂</dd>
+                                                <dd><span></span>心绞痛</dd>
+                                                <dd><span></span>静脉曲张</dd>
+                                                <dd><span></span>心力衰竭</dd>
+                                                <dd><span></span>血液病</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                神经系统
+                                                <dd><span></span>抑郁症</dd>
+                                                <dd><span></span>癫痫</dd>
+                                                <dd><span></span>帕金森</dd>
+                                                <dd><span></span>精神分裂症</dd>
+                                                <dd><span></span>老年痴呆</dd>
+                                                <dd><span></span>中风</dd>
+                                                <dd><span></span>神经性疼痛</dd>
+                                                <dd><span></span>多动症</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                内分泌科
+                                                <dd><span></span>糖尿病</dd>
+                                                <dd><span></span>甲状腺疾病</dd>
+                                            </dt>
+                                        </dl> -->
+                                    </div>
+                                    <!-- <div class="div_22">
+                                        <dl>
+                                            <dt>
+                                                风湿骨科
+                                                <dd>风湿类风湿</dd>
+                                                <dd>骨关节炎</dd>
+                                                <dd>跌打骨伤</dd>
+                                                <dd>腰椎病</dd>
+                                                <dd>骨质疏松</dd>
+                                                <dd>痛风</dd>
+                                                <dd>外用贴膏</dd>
+                                                <dd>器官移植</dd>
+                                                <dd>骨质增生</dd>
+                                                <dd>股骨头坏死</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                皮肤病
+
+                                                <dd>皮炎癣症</dd>
+                                                <dd>脱发</dd>
+                                                <dd>银屑病</dd>
+                                                <dd>痤疮</dd>
+                                                <dd>白癜风</dd>
+                                                <dd>尖锐湿疣</dd>
+                                                <dd>黄褐斑</dd>
+                                                <dd>疤痕</dd>
+                                                <dd>灰指甲</dd>
+                                                <dd>疱疹</dd>
+                                                <dd>烧烫创伤</dd>
+                                                <dd>过敏</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                呼吸道疾病
+                                                <dd>感冒发烧</dd>
+                                                <dd>咳嗽</dd>
+                                                <dd>上火</dd>
+                                                <dd>小儿感冒</dd>
+                                                <dd>哮喘</dd>
+                                                <dd>支气管炎</dd>
+                                                <dd>慢性阻塞性肺病</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                肝病科
+                                                <dd>乙肝</dd>
+                                                <dd>保肝护肝</dd>
+                                                <dd>胆结石</dd>
+                                                <dd>免疫调节</dd>
+                                                <dd>肝纤维化肝硬化</dd>
+                                                <dd>胆道疾病</dd>
+                                                <dd>脂肪肝</dd>
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                    <div class="div_23">
+                                        <dl>
+                                            <dt>
+                                                消化系统疾病  
+                                                <dd>胃炎</dd>
+                                                <dd>胃肠溃疡</dd>
+                                                <dd>结肠炎</dd>
+                                                <dd>消化不良</dd>
+                                                <dd>便秘</dd>
+                                                <dd>腹泻</dd>
+                                                <dd>痔疮</dd>
+                                                <dd>小儿肠胃病</dd>
+                                               
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                五官科疾病
+
+                                                <dd>鼻炎</dd>
+                                                <dd>咽喉炎</dd>
+                                                <dd>眼干眼涩</dd>
+                                                <dd>眼部炎症</dd>
+                                                <dd>白内障</dd>
+                                                <dd>青光眼</dd>
+                                                <dd>耳聋耳鸣</dd>
+                                                <dd>口腔溃疡</dd>
+                                                <dd>牙周病痛</dd>
+                                                <dd>视网膜病变</dd>
+                                                
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                妇科疾病
+                                                <dd>阴道炎</dd>
+                                                <dd>月经不调</dd>
+                                                <dd>避孕</dd>
+                                                <dd>保胎促孕</dd>
+                                                <dd>更年期</dd>
+                                                <dd>子宫疾病</dd>
+                                                <dd>乳腺疾病</dd>
+                                                <dd>盆腔炎</dd>
+                                            </dt>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                肿瘤科
+                                                <dd>肺癌</dd>
+                                                <dd>肝癌</dd>
+                                                <dd>胃癌</dd>
+                                                <dd>食道癌</dd>
+                                                <dd>淋巴癌</dd>
+                                                <dd>白血病</dd>
+                                                <dd>乳腺癌</dd>
+                                                <dd>化疗提高营养</dd>
+                                            </dt>
+                                        </dl>
+                                    </div> -->
+                                    <div></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xe60a;</i>滋润保健</a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="iconfont cft">&#xe65d;</i>维生素钙</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xe629;</i>隐形眼镜</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xe67f;</i>医疗器械、家电</a>
+                            </li>
+                            <li>                              
+                                <a href="#"><i class="iconfont cft">&#xe60a;</i>药妆个护</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xe61a;</i>成人用品</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xea27;</i>母婴专区</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft">&#xe620;</i>参茸花茶、休闲零食</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="iconfont cft" >&#xe709;</i>体检、口腔诊疗</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="ul_2">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">家庭常备药</a></li>
+                    <li><a href="#">乙肝</a></li>
+                    <li><a href="#" class="main_1">减肥增肥</a></li>
+                    <li><a href="#">阳痿早泄</a></li>
+                    <li><a href="#">血压</a></li>
+                    <li><a href="#">儿童医药馆</a></li>
+                    <li><a href="#" class="main_2">中药抓药</a></li>
+                    <li>
+                        <a href="#" class="main_3">
+                        <i class="iconfont">&#xe607;</i>
+                        商家海外购</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        掌上1药网
+                        <i class="iconfont">&#xe600;</i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="carousel">
+                    <ul>  
+                        <li><img src="images/img1/banner11.jpg"></li>
+                        <li><img src="images/img1/banner12.jpg"></li>
+                        <li><img src="images/img1/banner13.jpg"></li>
+                        <li><img src="images/img1/banner14.jpg"></li>
+                        <li><img src="images/img1/banner15.jpg"></li>
+                        <li><img src="images/img1/banner16.jpg"></li>
+                    </ul>
+                    <span class="prev">&lt;</span>
+                    <span class="next">&gt;</span>
+                </div> 
+                <div id="main_right">
+                    <div>
+                        <a href="#" class="main_right_1"><span>在线咨询</span></a>
+                        <a href="#" class="main_right_1"><span>医生问诊</span></a>
+                    </div>
+                    <ul>
+                        <li><a href="#">男科&gt;</a></li>
+                        <li><a href="#">心脑血管&gt;</a></li>
+                        <li><a href="#">肿瘤&gt;</a></li>
+                        <li><a href="#">皮肤性病&gt;</a></li>
+                        <li><a href="#">滋补保健&gt;</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">妇科&gt;</a></li>
+                        <li><a href="#">肝胆科&gt;</a></li>
+                        <li><a href="#">消化科&gt;</a></li>
+                        <li><a href="#">眼耳鼻喉&gt;</a></li>
+                        <li><a href="#">散光验配&gt;</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">糖尿病&gt;</a></li>
+                        <li><a href="#">神经科&gt;</a></li>
+                        <li><a href="#">风湿骨科&gt;</a></li>
+                        <li><a href="#">呼吸科&gt;</a></li>
+                        <li><a href="#">医疗器械&gt;</a></li>
+                    </ul>
+                </div>
+                <img src="images/img1/3.jpg"/>
+                <div class="main_right_2">
+                    <a href="#" class="main_right_1"><span>优质服务</span></a>
+                    <a href="#" class="main_right_1"><span>公告</span></a>
+                </div> 
+                <div class="main_right_3">
+                    <div >
+                        <span class="i_2">正</span>
+                        <p>正品保证</p>
+                    </div>
+                    
+                    <div><span class="i_2">授</span><p>品牌授权</p></div>
+                    
+                    
+                    <div><span class="i_2">监</span><p>药监认证</p></div>
+                    
+
+                    <div><span class="i_2">免</span><p>满79包邮</p></div>
+                    
+                </div>
+                <div id="main_right_bottom">
+                    <div>
+                        <img src="images/zz1.jpg"/>
+                        <img src="images/zz1.jpg"/>
+                        <img src="images/zz2.jpg"/>
+                        <img src="images/zz3.jpg"/>
+                        <img src="images/zz4.jpg"/>
+                    </div>
+                </div>
+            </main>
+            <div><img src="images/img2/11.jpg"/></div>
+        <!-- 内容部分 -->
+            <article>
+                <div></div>
+            </article>
+        <!-- 底部 -->
+            <footer>
+                        <div id="z_dv4">
+                            <div class="z_dv41">
+                                <div class="i_1"><span>监</span></div>
+                                <h4>药监认证</h4>
+                                <p>获得国家资质，权威认证，值得信赖！</p>
+                            </div>
+                            
+                            <div class="z_dv41">
+                                <div><span>授</span></div>
+                                <h4>品牌授权</h4>
+                                <p>秉承行业高标准，确保正品可信。</p>
+                            </div>
+
+                            <div class="z_dv41">
+                                <div><span>隐</span></div>
+                                <h4>隐私包装</h4>
+                                <p>保密包装，充分保护个人隐私！</p>
+                            </div>
+                            <div class="z_dv41">
+                                <div class="i_2"><span>货</span></div>
+                                <h4>货到付款</h4>
+                                <p>先收货后付款，购药更放心！</p>
+                            </div>
+                        </div>
+                        <div id="z_dv3">
+                            <div>
+                                <img src="images/z01.jpg"/>
+                                <ul>
+                                    <h4>1药网客户端</h4>
+                                    <li><a href="#">APP专享价更优惠</a></li>
+                                    <li><a href="#">购物满69免邮</a></li>
+                                    <li><a href="#">超低移动专享价</a></li>
+                                    <li><a href="#">药监认证,正品保证</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <img src="images/z02.jpg"/>
+                                <ul>
+                                    <h4>1诊客户端</h4>
+                                    <li><a href="#">3分钟快速连线名医</a></li>
+                                    <li><a href="#">寻医生问药，一站完成</a></li>
+                                    <li><a href="#">一键提交，自动来电</a></li>
+                                    <li><a href="#">电子档案，永久追溯</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <img src="images/z03.jpg"/>
+                                <ul>
+                                    <h4>微信公众号</h4>
+                                    <li><a href="#">最全的健康资讯</a></li>
+                                    <li><a href="#">掌上购药，轻松一点</a></li>
+                                    <li><a href="#">最新优惠，一网打尽</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="z_dv1">
+                        </div>
+                         <div id="zdv2">
+                             <p class="p_1">400-007-0958</p>
+                             <p>周一到周日 09:00-21:00</p>
+                             <p>（收取市话费）</p>
+                         </div>
+                <div id="z_dv">
+                    <p>
+                    <a href="#" class="z_dv11">1药网网上药店</a>，国家药监局认证通过的合法网上药店，中国医药电子商务行业的开拓者领跑者。<span class="z_dv11">粤ICP备12015869号-1</span>
+                    </p>
+                    <p>
+                    公司名称：广东壹号大药房连锁有限公司 公司地址：广东省广州市越秀区共和西路1号2层 联系电话：020-31067218
+                    </p>
+                    <div class="tu"><img src="images/foot.png"/></div>
+                    <p class="z_dv12">
+                    Copyright (C) 2010-2015 1药网版权所有
+                    <i class="iconfont" id="police">&#xe71b;</i>
+                    <span class="z_dv11">公安备案号 44010402000743</span>
+                    </p>
+                </div>
+            </footer>
         </div>
     </div>
+    <script src="js/common.js"></script>
+    <script src="js/banner.js"></script>
     <link rel="stylesheet" type="text/css" href="css/head.css" />
-<!--     <script src="lib/require.js"data-main="js/home"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/zititubiao.css" />
+    <script src="js/foot.js"></script>
 </body>
 </html>

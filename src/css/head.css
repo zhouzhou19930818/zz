@@ -17,7 +17,6 @@ div .container {
 }
 
 div .container header {
-  overflow: hidden;
   height: 36px;
   width: 100%;
   background-color: #f1f1f1;
@@ -41,12 +40,37 @@ div .container header ul:last-child {
   display: inline-block;
 }
 
+div .container header ul:last-child .li_1 {
+  position: relative;
+}
+
+div .container header ul:last-child .li_1 #arrows_2 {
+  position: absolute;
+  top: 4px;
+  left: 55px;
+  color: #5e5e5e;
+}
+
+div .container header ul:last-child .li_1:hover #arrows_2 {
+  transform: rotate(180deg);
+}
+
 div .container header ul:last-child li {
   float: left;
   height: 36px;
   margin: 0 10px;
   line-height: 36px;
   font-size: 12px;
+}
+
+div .container header ul:last-child li span {
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+}
+
+div .container header ul:last-child li #help {
+  border-left: 1px solid #ddd;
+  padding-left: 10px;
 }
 
 div .container header ul:last-child li a {
@@ -58,23 +82,104 @@ div .container header ul:last-child li .phone {
 }
 
 div .container header ul:last-child li #login {
-  color: #e54948;
+  color: #d00;
 }
 
-div .container div {
+div .container header ul:last-child li #myyaowang {
+  color: #0083ce;
+  border-bottom: 1px solid #0083ce;
   position: relative;
 }
 
-div .container div div:first-child {
+div .container header ul:last-child li #myyaowang .div_1 {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+  float: left;
+}
+
+div .container header ul:last-child li #myyaowang .div_1 li {
+  width: 95px;
+  color: #5e5e5e;
+  margin: 0;
+}
+
+div .container header ul:last-child li #myyaowang li:hover {
+  background-color: #aaa;
+  color: #fff;
+}
+
+div .container header ul:last-child li:hover a {
+  border-bottom: 1px solid #0083ce;
+  color: #0083ce;
+}
+
+div .container header ul:last-child li:hover #login {
+  border-bottom: 1px solid #d00;
+}
+
+div .container img {
+  display: block;
+}
+
+div .container .box_1 {
+  display: flex;
+  padding-top: 26px;
+}
+
+div .container .box_1 div {
+  position: relative;
+  margin-right: 100px;
+}
+
+div .container .box_1 div div:first-child {
   float: left;
   display: inline-block;
 }
 
-div .container div div:nth-child(2) {
+div .container .box_1 div div:nth-child(2) {
   position: relative;
 }
 
-div .container div div:nth-child(2) input {
+div .container .box_1 div .p1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+div .container .box_1 div .p1 a {
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+div .container .box_1 div .p1 .xueyaji {
+  color: #d00;
+  font-size: 14px;
+}
+
+div .container .box_1 div .p1 a:hover {
+  border-bottom: 1px solid #f00;
+  color: #f00;
+}
+
+div .container .btn_1 {
+  width: 82px;
+  height: 46px;
+  line-height: 55px;
+  border: 1px solid #c7a774;
+  cursor: pointer;
+  background-color: #fff;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 450px;
+}
+
+div .container .put_1 {
   width: 435px;
   height: 44px;
   line-height: 44px;
@@ -87,29 +192,428 @@ div .container div div:nth-child(2) input {
   float: left;
 }
 
-div .container div div:nth-child(2) button {
-  width: 82px;
-  height: 46px;
-  line-height: 55px;
-  border: 1px solid #c7a774;
-  cursor: pointer;
-  background-color: #fff;
-  margin-left: -1px;
+div .container .picture_1 img {
+  width: 100px;
+  height: 90px;
+}
+
+div .container .carslist {
+  display: inline-block;
+  border: 1px solid #5e5e5e;
+  width: 140px;
+  height: 36px;
+  position: absolute;
+  top: 136px;
+  right: 130px;
+  border-radius: 6px;
+}
+
+div .container .carslist span {
+  color: #5e5e5e;
+  line-height: 36px;
+  margin-left: 20px;
+}
+
+div .container main {
+  position: relative;
+}
+
+div .container main .dv_1 {
+  display: inline-block;
+  background: #19323a;
+  width: 180px;
+  text-align: left;
+  margin-top: 9px;
   float: left;
 }
 
-div .container div .p1 {
+div .container main .dv_1 .a1 {
+  display: block;
+  z-index: 100;
+  width: 166px;
+  padding: 0 0 0 14px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #19323a;
+  font-weight: 700;
+  color: #fff;
+  font-size: 15px;
+}
+
+div .container main .dv_1 .dv_11 .ul_1 li {
+  background-color: #314349;
+}
+
+div .container main .dv_1 .dv_11 .ul_1 li .cft {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+div .container main .dv_1 .dv_11 .ul_1 li a {
+  color: #fff;
+  display: block;
+  z-index: 100;
+  width: 166px;
+  height: 40px;
+  padding: 0 0 0 14px;
+  line-height: 40px;
+  background-color: #19323a;
+  font-size: 15px;
+}
+
+div .container main .ul_2 {
+  float: right;
+}
+
+div .container main .ul_2 li {
+  float: left;
+  position: relative;
+}
+
+div .container main .ul_2 li a {
+  color: #505050;
+  font-weight: 400;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 56px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+div .container main .ul_2 li .main_1, div .container main .ul_2 li .main_2 {
+  color: #e54948;
+}
+
+div .container main .ul_2 li .main_3 {
+  color: #864efe;
+}
+
+div .container main .div_2 {
   position: absolute;
-  top: 60px;
-  left: 125px;
+  top: 250px;
+  left: 310px;
+  display: flex;
 }
 
-div .container div .p1 a {
-  color: #5e5e5e;
+div .container main .div_2 .div_21 {
+  border: 1px solid #ddd;
+}
+
+div .container main .div_2 .div_21 dl {
+  width: 252px;
+  height: 399px;
+}
+
+div .container main .div_2 .div_21 dl dt p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+div .container main .div_2 .div_21 dl dt dd span a {
+  color: #ddd;
+}
+
+div .container main #main_right {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+div .container main #main_right .main_right_1 {
+  font-size: 16px;
+  color: #c7a774;
+  display: inline-block;
+  border-bottom: 1px solid #C7A774;
+  margin-left: 20px;
+  line-height: 22px;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+div .container main #main_right > ul {
+  float: left;
+  padding-left: 5px;
+  padding-bottom: 8px;
+  overflow: hidden;
+}
+
+div .container main #main_right > ul > li > a {
+  color: #707070;
+  float: left;
+  display: inline-block;
+  width: 72px;
+  height: 25px;
+  line-height: 25px;
   font-size: 14px;
 }
 
-div .container div .p1 .xueyaji {
+div .container main > img {
+  width: 230px;
+  height: 80px;
+  position: absolute;
+  top: 210px;
+  right: 0;
+}
+
+div .container main > .main_right_2 {
+  position: absolute;
+  top: 300px;
+  right: 90px;
+}
+
+div .container main > .main_right_2 .main_right_1 {
+  font-size: 16px;
+  color: #c7a774;
+  display: inline-block;
+  border-bottom: 1px solid #C7A774;
+  margin-left: 20px;
+  line-height: 22px;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+div .container main > .main_right_3 {
+  display: flex;
+  position: absolute;
+  top: 340px;
+  right: 0;
+  width: 240px;
+}
+
+div .container main > .main_right_3 .i_2 {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #c7a774;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  color: #c7a774;
+  display: block;
+}
+
+div .container main > .main_right_3 > div {
+  margin: 20px 4px 0 4px;
+}
+
+div .container main > .main_right_3 > div > p {
+  display: block;
+  color: #c7a774;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+div .container main #main_right_bottom {
+  margin: 10px 0 10px 0;
+}
+
+div .container main #main_right_bottom > div {
+  display: flex;
+}
+
+div .container main #main_right_bottom > div > img {
+  width: 250px;
+  height: 150px;
+}
+
+div .container footer {
+  position: relative;
+}
+
+div .container footer .tu {
+  margin: 10px 0 14px 0;
+}
+
+div .container footer #zdv2 {
+  padding-left: 50px;
+  text-align: center;
+  border-left: 1px solid #ddd;
+  position: absolute;
+  top: 380px;
+  right: 50px;
+}
+
+div .container footer #zdv2 .p_1 {
+  color: #c7a774;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+div .container footer #zdv2 p {
+  font-size: 14px;
+  color: #5E5E5E;
+  font-weight: 400;
+}
+
+div .container footer #z_dv {
+  color: #5E5E5E;
+  font-size: 14px;
+  text-align: center;
+}
+
+div .container footer #z_dv .z_dv11:first-child {
+  color: #5E5E5E;
+}
+
+div .container footer #z_dv .z_dv11:last-child {
+  margin-left: 5px;
+}
+
+div .container footer #z_dv .z_dv12:last-child {
+  margin: 10px 0 20px 0;
+}
+
+div .container footer #z_dv .z_dv11:hover {
+  border-bottom: 1px solid #f00;
   color: #d00;
+}
+
+div .container footer > #z_dv1 {
+  display: flex;
+}
+
+div .container footer > #z_dv1 > ul:first-child {
+  margin-left: 50px;
+}
+
+div .container footer > #z_dv1 > ul {
+  margin: 28px 10px 0 4px;
+  width: 130px;
+  color: #5E5E5E;
   font-size: 14px;
+}
+
+div .container footer > #z_dv1 > ul > li {
+  height: 24px;
+  line-height: 24px;
+}
+
+div .container footer > #z_dv1 > ul > li a {
+  cursor: pointer;
+}
+
+div .container footer > #z_dv1 > ul > li:hover a {
+  border-bottom: 1px solid #000;
+  color: #444;
+}
+
+div .container footer > #z_dv1 > ul > h4 {
+  color: #444;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+div .container footer #z_dv3 {
+  display: flex;
+}
+
+div .container footer #z_dv3 > div {
+  width: 343px;
+  height: 108px;
+  background: #f0f0f0;
+  padding: 0px 0 20px 40px;
+  border: 1px solid #f0f0f0;
+  margin: 50px 20px 0 0;
+}
+
+div .container footer #z_dv3 > div > img {
+  width: 110px;
+  height: 110px;
+  display: block;
+  float: left;
+  margin: 10px 30px 0 10px;
+}
+
+div .container footer #z_dv3 > div > ul {
+  margin: 10px 0 10px 0;
+}
+
+div .container footer #z_dv3 > div > ul > h4 {
+  font-size: 20px;
+  color: #c7a774;
+  font-weight: 400;
+}
+
+div .container footer #z_dv3 > div > ul > li > a {
+  color: #707070;
+  line-height: 20px;
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+div .container footer #z_dv4 {
+  display: flex;
+  height: 168px;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+div .container footer #z_dv4 .z_dv41 {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin: 0 50px 0 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+div .container footer #z_dv4 .z_dv41 > h4 {
+  color: #333;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 5px 0 5px 0;
+  text-align: center;
+}
+
+div .container footer #z_dv4 .z_dv41 > div {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #c7a774;
+  border-radius: 50%;
+  margin: 30px 0 0 75px;
+}
+
+div .container footer #z_dv4 .z_dv41 > div > span {
+  font-size: 30px;
+  color: #c7a774;
+  line-height: 50px;
+}
+
+div .container footer #z_dv4 .z_dv41 > p {
+  font-weight: 500;
+}
+
+div .container footer #z_dv4 .z_dv41 > .i_1 {
+  margin-left: 90px;
+}
+
+div .container footer #z_dv4 .z_dv41 > .i_2 {
+  margin-left: 65px;
+}
+
+#zoom {
+  font-size: 40px;
+  color: #c7a774;
+  line-height: 36px;
+}
+
+#car {
+  color: #5e5e5e;
+  margin-left: 10px;
+}
+
+#arrows_1 {
+  color: #5e5e5e;
+}
+
+#phone1 {
+  color: #d00;
+}
+
+#police {
+  font-size: 30px;
+  color: #f00;
 }
