@@ -1,0 +1,13 @@
+ul,li,html,body,div{margin:0;padding:0;}
+ul{list-style: none;padding:0;margin:0;}
+.carousel_1{position:relative;width:600px;height:295px;overflow:hidden;}
+.carousel_1 ul{position:absolute;top:0;left:0;overflow: hidden;width:3240px;}
+.carousel_1 ul li{float:left;}
+.carousel_1 img{display:block;height:295px;width:600px;}
+.carousel_1>span{position:absolute;left:10px;top:50%;margin-top:-30px;width:30px;height:60px;line-height:60px;text-align:center;background-color: rgba(0,0,0,0.2);color:#fff;display:none;}
+.carousel_1:hover span{display:inline-block;}
+.carousel_1>.next_1{left:auto;right:10px;color:#0fc;cursor:pointer;}
+.carousel_1>.prev_1{right:auto;left:10px;color:#0fc;z-index: 1000;cursor:pointer;}
+.carousel_1 .page{position:absolute;left:295px;bottom:8px;transform:translate(-50%,0);}
+.carousel_1 .page span{display:inline-block;margin:0 5px;width:20px;height:20px;line-height: 20px;text-align:center;background-color: rgba(255,255,255,0.8);border-radius:50%;cursor:pointer;}
+.carousel_1 .page span.active{background-color: #0fc;} 
