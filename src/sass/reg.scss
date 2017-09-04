@@ -1,0 +1,33 @@
+@import 'var';
+
+#reg{
+    display:flex;
+    margin:140px auto;width:990px;height:520px;border:1px solid #e6e6e6;border-top: #0083ce 2px solid; position:relative;box-shadow:-1px 1px 10px #EFEFEF,-1px 10px 10px #EFEFEF;
+    >img{position:absolute;top:-100px;left:0;width:160px;}
+    .reg_l{
+        padding-left:100px;
+        h2{
+            font-size:20px;color:#5e5e5e;margin:13px 0;padding-left:50px;
+    padding-right: 18px;}
+        input{
+            display:block;width:286px;height:26px;padding:6px 12px 6px 0;font-size:14px;vertical-align:middle;background-color:transparent;
+        }
+        >div{
+            margin:10px 0 10px 0;
+            .put_1{width:15px;height:15px;display:inline-block;}
+            p{
+                display:inline-block;
+                font-size:14px;color:#a5a5a5; 
+            }
+        }
+        button{
+                display:inline-block;margin-bottom:0;font-weight:bold;text-align:center;vertical-align: middle;cursor:pointer;border:1px solid transparent;padding:6px 12px;font-size:14px;background-color:#0099F1;width:300px;border-bottom:#0083ce 2px solid;border-radius:2px;
+        }
+        >p{color:#a5a5a5;font-size:14px;padding:20px 0 10px 0;}
+    }
+    .reg_r{margin:72px 0 0 40px;}
+}
+.error{color:#f00;}
+.success{color:#58ba58;}
+.wrong{border:2px solid red;}
+.right{border:2px solid #58bc58;}

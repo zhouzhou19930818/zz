@@ -22,6 +22,7 @@
 </head>
 <body>
     <div>
+        
         <div id="container" class="container">
         <!-- 头部开始 -->
             <header>
@@ -115,29 +116,7 @@
                     <span>购物车</span>
                 </a>
             </div>
-<!--             <div>
-                <i class="iconfont">&#xe634;</i>
-                <i class="iconfont">&#xe620;</i>
-                
-                <i class="iconfont">&#xe607;</i>
-                
-                
-                <i class="iconfont">&#xe64b;</i>
-                <i class="iconfont">&#xe600;</i>
-                <i class="iconfont">&#xe648;</i>
-                <i class="iconfont">&#xe8e7;</i>
-                <i class="iconfont">&#xe6e5;</i>
-                <i class="iconfont">&#xea27;</i>
-                <i class="iconfont">&#xe661;</i>
-                
-                <i class="iconfont">&#xe709;</i>
-                <i class="iconfont">&#xe611;</i>
-                
-                <i class="iconfont">&#xe501;</i>
-                <i class="iconfont">&#xe61a;</i>
-                
-                <i class="iconfont">&#xe513;</i>
-            </div> -->
+
         <!-- 开始轮播图 -->
             <main>
                 <div class="dv_1">
@@ -439,7 +418,11 @@
                 </div>
                 <div id="main_right_bottom">
                     <div>
-                        <img src="images/zz1.jpg"/>
+                        <div id="z_clock">
+                            <i class="iconfont">&#xe6e5;</i>
+                            <p>今日限时购</p>
+                            <span>每日零时更新</span>
+                        </div>
                         <img src="images/zz1.jpg"/>
                         <img src="images/zz2.jpg"/>
                         <img src="images/zz3.jpg"/>
@@ -450,7 +433,7 @@
             <div><img src="images/img2/11.jpg"/></div>
         <!-- 内容部分 -->
             <article>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>1F 家庭常备药</h2>
                         <div id="article_left_1">
@@ -532,7 +515,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>2F 专科用药</h2>
                         <div id="article_left_1">
@@ -616,7 +599,7 @@
                     </div>
                 </div>
                 <div id="i_3"><img src="images/img3/23.jpg"/></div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>3F 医疗器械</h2>
                         <div id="article_left_1">
@@ -698,7 +681,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>4F 隐形眼镜</h2>
                         <div id="article_left_1">
@@ -780,7 +763,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>5F 滋补保健 </h2>
                         <div id="article_left_1">
@@ -862,7 +845,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>6F 维生素钙</h2>
                         <div id="article_left_1">
@@ -944,7 +927,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>7F 药妆个护</h2>
                         <div id="article_left_1">
@@ -1026,7 +1009,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>8F 情趣用品</h2>
                         <div id="article_left_1">
@@ -1108,7 +1091,7 @@
                     </ul>
                     </div>
                 </div>
-                <div id="art">
+                <div id="art" class="louceng">
                     <div id="article_left">
                         <h2>9F 母婴用品</h2>
                         <div id="article_left_1">
@@ -1191,9 +1174,127 @@
                     </div>
                 </div>
             </article>
-            <div id="shangbiao">
-                <img src="images/big.png"/>
+            <div id="louti">
+                <ul>
+                    <li class="hover">1F <span>家庭常备药</span> </li>
+                    <li>2F <span>专科用药</span> </li>
+                    <li>3F <span>医疗器械</span> </li>
+                    <li>4F <span>隐形眼镜</span> </li>
+                    <li>5F <span>滋补保健</span> </li>
+                    <li>6F <span>维生素钙</span> </li>
+                    <li>7F <span>药妆个护</span> </li>
+                    <li>8F <span>情趣用品</span> </li>
+                    <li>9F <span>母婴用品</span> </li>
+                </ul>
             </div>
+            <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+            <script type="text/javascript">
+                jQuery(function($){
+                    $louti = $('#louti');
+                    $loutiItem = $louti.find('li');
+                    // console.log($loutiItem,777)
+                    $louceng = $('.louceng');
+                    //window绑定滚动事件
+                    $(window).on('scroll',function(){
+                        // 获取滚动条滚动过的距离
+                        var scrollTop = $(window).scrollTop();
+                        //当滚动到一定距离时，显示楼梯
+                        if(scrollTop>880 &&scrollTop<5680){
+                            $louti.fadeIn();
+                        }else if(scrollTop<880 ||scrollTop>=5680){
+                            $louti.fadeOut();
+                        }
+                        //当滚动到相应的楼层时，楼梯"相应位置"显示高亮
+                        $louceng.each(function(idx,ele){
+                            // console.log(idx,ele)
+                            if(scrollTop >= $(ele).offset().top - $(ele).outerHeight(true)/2){
+                                $loutiItem.eq(idx).addClass('hover').siblings('li').removeClass('hover');
+                            }
+                        })
+                    });
+                    // 4）点击楼梯跳到对应楼层
+                    $louti.on('click','li',function(){
+                        var targetScrollTop;
+                        if($(this).hasClass('last')){
+                            targetScrollTop = 0
+                        }else{
+                            var idx = $(this).index();
+
+                            // 获取对应楼层所在的偏移量
+                            targetScrollTop = $louceng.eq(idx).offset().top;
+                        }
+                            // var idx = $(this).index();
+                            // var targetScrollTop =$louceng.eq(idx).offset().top;
+                            // var timer = setInterval(function(){
+                            //     var scrollTop = $(window).scrollTop();
+                            //     var speed = (targetScrollTop - scrollTop)/10;
+                            //     speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
+                            //     if(scrollTop===targetScrollTop || speed === 0){  console.log(scrollTop,targetScrollTop,speed)
+                            //         clearInterval(timer);
+
+                            //         scrollTop = targetScrollTop - speed;
+                            //     }
+                            //     // clearInterval(timer);
+
+                                // $(window).scrollTop(scrollTop+speed);
+                            $('html,body').stop().animate({'scrollTop':targetScrollTop},'slow');
+                        // },30);
+                    });
+                });
+            </script>
+            <div id="shangbiao">
+                <header>
+                    <span>品牌旗舰店</span>
+                    <span>友情连接</span>
+                </header>
+                <div class="content">
+                    <div>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#">凤凰中医</a>
+                        <a href="#">中国平安官网</a>
+                        <a href="#">网上药店</a>
+                        <a href="#">健客</a>
+                        <a href="#">药品网购</a>
+                        <a href="#">有问必答知识库</a>
+                        <a href="#">预约挂号</a>
+                        <a href="#">心理咨询</a>
+                        <a href="#">妇科疾病</a>
+                        <a href="#">百济新特药房</a>
+                        <a href="#">药品资讯网</a>
+                        <a href="#">家庭医生在线</a>
+                        <a href="#">药品</a>
+                        <a href="#">39药品</a>
+                        <a href="#">中华中医网</a>
+                        <a href="#">预约挂号</a>
+                        <a href="#">养生</a>
+                        <a href="#">心理咨询</a>
+                    </div>
+                </div>
+            </div>
+            <script src="js/table.js"></script>
         <!-- 底部 -->
             <footer>
                         <div id="z_dv4">
@@ -1273,6 +1374,36 @@
                     </p>
                 </div>
             </footer>
+        </div>
+        <div  id="toTop" class="toTop">
+            <ul>
+                <li>
+                    <i class="iconfont">
+                        &#xe661;
+                    </i>
+                    <a href="#"><span>在线咨询</span></a>
+                </li>
+                <li>
+                    <i class="iconfont">
+                        &#xe513;
+                        
+                    </i>
+                    <a href="#"><span>购物车</span></a>
+                </li>
+                <li>
+                    <i class="iconfont">
+                    &#xe501;
+                    </i>
+                    <a href="#"><span>用户反馈</span></a>
+                </li>
+                <li id="totop">
+                    <i class="iconfont">
+                        &#xe611;
+                    </i>
+                    <span>返回顶部</span>
+                </li>
+            </ul>
+            <script src="js/totop.js"></script>
         </div>
     </div>
     <script src="js/common.js"></script>
