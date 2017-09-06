@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(){
     // 获取元素
-    var tab = document.getElementById('shangbiao');
+    var tab = document.getElementsByClassName('login_r')[0];
     var header = tab.children[0];
     var content = tab.children[1];
     var tabItem = header.children;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',function(){
         // console.log(i,tabItem[i]);
         // tabItem[i].setAttribute('idx',i);
         tabItem[i].idx = i;
-        tabItem[i].onmouseenter = function(){
+        tabItem[i].onclick = function(){
             // this
             // 先隐藏所有，再显示当前
             // 去除所有高亮，再添加当前高亮

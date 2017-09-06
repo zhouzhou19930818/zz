@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-08-19 11:14:34
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-04 21:17:22
+* @Last Modified time: 2017-09-06 17:43:34
 */
 // console.log(5555)
 document.addEventListener('DOMContentLoaded',function(){
@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded',function(){
     var put_1 = document.querySelector('.put_1');
     var tips = document.querySelector('.tips');
     var username = document.querySelector('#username');
+    var passwordval = document.querySelector('#pwd');
+    var usernameval = document.querySelector('#username');
 var c_2 = document.getElementsByClassName('c_2')[0];
     // console.log(input);
     // for(var i=0;i<=input.length-1;i++){
@@ -37,7 +39,16 @@ var c_2 = document.getElementsByClassName('c_2')[0];
                 if(xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)){
                     // var res = JSON.parse(xhr.responseText);//报错,不是json字符串
                     var _res_1 = xhr.responseText;
-                    console.log(xhr.responseText,username)
+                    try{
+                        _res_1 = JSON.parse(_res_1);
+                    }catch(err){
+                        try{
+                            _res_1 = eval('(' + _res_1 + ')');
+                        }catch(e){
+
+                        }
+                    }
+                    // console.log(xhr.responseText,username)
                     if(_res_1=='no'){
                         // console.log(5555)
                         tips.classList.remove('success');
@@ -52,6 +63,7 @@ var c_2 = document.getElementsByClassName('c_2')[0];
             }
             xhr.open('get','../api/reg.php?username='+username,true);
             xhr.send(null);
+            // &'password='+password
         }    
 }
 var c_0 = document.getElementsByClassName('c_0')[0];
@@ -90,17 +102,31 @@ var c_1 = document.getElementsByClassName('c_1')[0];
         }
     }
 
-    // var xhr_1 = new XMLHttpRequest();
-    // var onreadystatechange=function(){
-    //     if(xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)){
+    var xhr_1 = new XMLHttpRequest();
+    var onreadystatechange=function(){
+        if(xhr_1.readyState === 4 && (xhr_1.status === 200 || xhr_1.status === 304)){
+            var _res_2 = xhr.responseText;
+            try{
+                _res_2 = JSON.parse(_res_2);
+            }catch(err){
+                try{
+                    _res_2 = eval('(' + _res_2 + ')');
+                }catch(ee){
 
-    //     }
-    // }
+                }
+            }
+        }
+    }
 btn1.onclick=function(){
         // console.log(btn1,666,btn2)
         // console.log(zzflag)
         if(put_1.checked == true && zzflag==true){
-        alert('恭喜您，注册成功');
+            // console.log(passwordval.value,usernameval.value);
+                 
+            xhr_1.open('get','../api/reg1.php?username='+usernameval.value+'&password='+passwordval.value,true);
+            // console.log(passwordval.value,usernameval.value);
+            xhr_1.send(null);
+            alert('恭喜您，注册成功');
         }else if(put_1.checked == false && zzflag==true){
             put_1.focus();
         }else if(put_1.checked == true && zzflag==false){
@@ -112,5 +138,4 @@ btn1.onclick=function(){
 }
 // username.onblur=function(){
 // }
-    
 });

@@ -20,6 +20,7 @@ a {
   border-top: #0083ce 2px solid;
   position: relative;
   box-shadow: -1px 1px 10px #EFEFEF,-1px 10px 10px #EFEFEF;
+  margin-bottom: 50px;
 }
 
 #reg > img {
@@ -107,4 +108,30 @@ a {
 
 .right {
   border: 2px solid #58bc58;
+}
+
+#the_last {
+  text-align: center;
+}
+
+#the_last > .z_p {
+  color: #5E5E5E;
+  font-size: 12px;
+}
+
+#the_last > p {
+  margin-bottom: 5px;
+}
+
+#the_last > p > a {
+  color: #666;
+  font-size: 14px;
+  display: inline-block;
+  border-right: 2px solid #ccc;
+  padding: 0 8px;
+}
+
+#the_last > p > a:hover span {
+  color: #0083ce;
+  border-bottom: 1px solid #0083ce;
 }
