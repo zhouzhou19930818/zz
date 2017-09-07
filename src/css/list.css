@@ -1,0 +1,351 @@
+body, html, header, ul, li, p, h1, h2, h3, h4, div, span, input, button, article {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#zoom {
+  font-size: 40px;
+  color: #c7a774;
+  line-height: 36px;
+}
+
+#car {
+  color: #5e5e5e;
+  margin-left: 10px;
+}
+
+#arrows_1 {
+  color: #5e5e5e;
+}
+
+#phone1 {
+  color: #d00;
+}
+
+#box_top .container {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+#box_top .container header {
+  height: 36px;
+  width: 100%;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #e9e9e9;
+  display: block;
+}
+
+#box_top .container header ul:first-child {
+  float: left;
+  display: inline-block;
+  line-height: 36px;
+  font-size: 12px;
+}
+
+#box_top .container header ul:first-child ul {
+  display: none;
+}
+
+#box_top .container header ul:last-child {
+  float: right;
+  display: inline-block;
+}
+
+#box_top .container header ul:last-child .li_1 {
+  position: relative;
+}
+
+#box_top .container header ul:last-child .li_1 #arrows_2 {
+  position: absolute;
+  top: 4px;
+  left: 55px;
+  color: #5e5e5e;
+}
+
+#box_top .container header ul:last-child .li_1:hover #arrows_2 {
+  transform: rotate(180deg);
+}
+
+#box_top .container header ul:last-child li {
+  float: left;
+  height: 36px;
+  margin: 0 10px;
+  line-height: 36px;
+  font-size: 12px;
+}
+
+#box_top .container header ul:last-child li span {
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+}
+
+#box_top .container header ul:last-child li #help {
+  border-left: 1px solid #ddd;
+  padding-left: 10px;
+}
+
+#box_top .container header ul:last-child li a {
+  color: #5e5e5e;
+}
+
+#box_top .container header ul:last-child li .phone {
+  color: #c7a774;
+}
+
+#box_top .container header ul:last-child li #login {
+  color: #d00;
+}
+
+#box_top .container header ul:last-child li #myyaowang {
+  color: #0083ce;
+  border-bottom: 1px solid #0083ce;
+  position: relative;
+}
+
+#box_top .container header ul:last-child li #myyaowang .div_1 {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+  float: left;
+}
+
+#box_top .container header ul:last-child li #myyaowang .div_1 li {
+  width: 95px;
+  color: #5e5e5e;
+  margin: 0;
+}
+
+#box_top .container header ul:last-child li #myyaowang li:hover {
+  background-color: #aaa;
+  color: #fff;
+}
+
+#box_top .container header ul:last-child li:hover a {
+  border-bottom: 1px solid #0083ce;
+  color: #0083ce;
+}
+
+#box_top .container header ul:last-child li:hover #login {
+  border-bottom: 1px solid #d00;
+}
+
+#box_top .container .box_1 {
+  display: flex;
+  padding-top: 26px;
+}
+
+#box_top .container .box_1 div {
+  position: relative;
+  margin-right: 100px;
+}
+
+#box_top .container .box_1 div div:first-child {
+  float: left;
+  display: inline-block;
+}
+
+#box_top .container .box_1 div div:nth-child(2) {
+  position: relative;
+}
+
+#box_top .container .box_1 div .p1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+#box_top .container .box_1 div .p1 a {
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+#box_top .container .box_1 div .p1 .xueyaji {
+  color: #d00;
+  font-size: 14px;
+}
+
+#box_top .container .box_1 div .p1 a:hover {
+  border-bottom: 1px solid #f00;
+  color: #f00;
+}
+
+#box_top .container .btn_1 {
+  width: 82px;
+  height: 46px;
+  line-height: 55px;
+  border: 1px solid #c7a774;
+  cursor: pointer;
+  background-color: #fff;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 450px;
+}
+
+#box_top .container .put_1 {
+  width: 435px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 5px 0 9px;
+  border: 1px solid #c7a774;
+  color: #666;
+  font-size: 14px;
+  vertical-align: middle;
+  background-color: #fff;
+  float: left;
+}
+
+#box_top .container .picture_1 img {
+  width: 100px;
+  height: 90px;
+}
+
+#box_top .container .carslist {
+  display: inline-block;
+  border: 1px solid #5e5e5e;
+  width: 140px;
+  height: 36px;
+  position: absolute;
+  top: 100px;
+  right: 140px;
+  border-radius: 6px;
+}
+
+#box_top .container .carslist span {
+  color: #5e5e5e;
+  line-height: 36px;
+  margin-left: 20px;
+}
+
+#box_top .container #box_bottom {
+  border-top: 2px solid #c7a774;
+  display: flex;
+}
+
+#showname {
+  line-height: 36px;
+  display: inline-block;
+  height: 36px;
+}
+
+#box_bottom_l {
+  width: 180px;
+  height: 222px;
+  margin-top: 20px;
+}
+
+#box_bottom_l > h2 {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 18px 12px 9px;
+  background-color: #ddd;
+  border-top: 1px solid #dbdbdb;
+  color: #5E5E5E;
+}
+
+#box_bottom_l > h4 {
+  margin: 0;
+  padding: 0 35px;
+  height: 36px;
+  background-color: #2196F3;
+  line-height: 36px;
+  font-size: 12px;
+  border-top: 1px solid #e6e6e6;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+#box_bottom_l > h4 #btnjian, #box_bottom_l > h4 #btnjia {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  line-height: 13px;
+  display: none;
+}
+
+#box_bottom_l > h4 #btnjia {
+  display: block;
+}
+
+#box_bottom_l > .content {
+  padding: 0 35px;
+  height: 190px;
+  display: none;
+}
+
+#box_bottom_l > .content > ul > li {
+  padding: 7px 0;
+  overflow: hidden;
+}
+
+#box_bottom_l > .content > ul > li > a {
+  color: #5E5E5E;
+  font-size: 14px;
+}
+
+#box_bottom_l > .content > ul > li > a:hover {
+  color: #f00;
+  border-bottom: 1px solid #f00;
+}
+
+#datalist {
+  display: flex;
+}
+
+#box_bottom_r {
+  margin: 20px 15px 20px 20px;
+  margin-left: 15px;
+  border: 1px solid #ddd;
+}
+
+#box_bottom_r > div {
+  border-bottom: 1px solid #ddd;
+}
+
+#box_bottom_r > div > h4 {
+  color: #f00;
+  font-size: 14px;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+#box_bottom_r > div #box_bottom_r_top > div {
+  display: flex;
+}
+
+#box_bottom_r > div #box_bottom_r_top > div > span {
+  color: #5E5E5E;
+  font-size: 14px;
+  margin-right: 100px;
+}
+
+#box_bottom_r > div #box_bottom_r_top > div > .selection > ul {
+  float: left;
+  margin-right: 50px;
+}
+
+#box_bottom_r > div #box_bottom_r_top > div > .selection > ul > li {
+  float: left;
+  width: 8px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#box_bottom_r > div #box_bottom_r_top > div > .selection > ul > li > a {
+  color: #666;
+}

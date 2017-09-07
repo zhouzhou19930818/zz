@@ -11,6 +11,25 @@ a {
   text-decoration: none;
 }
 
+#zoom {
+  font-size: 40px;
+  color: #c7a774;
+  line-height: 36px;
+}
+
+#car {
+  color: #5e5e5e;
+  margin-left: 10px;
+}
+
+#arrows_1 {
+  color: #5e5e5e;
+}
+
+#phone1 {
+  color: #d00;
+}
+
 div #louti {
   position: fixed;
   top: 50px;
@@ -527,6 +546,41 @@ div .container article #art #article_left > h2 {
   font-size: 22px;
 }
 
+div .container article #art #article_left #h2_2 {
+  background-color: #8cd7d3;
+  border: 1px solid #8cd7d3;
+}
+
+div .container article #art #article_left #h2_3 {
+  background-color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+div .container article #art #article_left #h2_4 {
+  background-color: #f6c89e;
+  border: 1px solid #f6c89e;
+}
+
+div .container article #art #article_left #h2_5 {
+  background-color: #aee177;
+  border: 1px solid #aee177;
+}
+
+div .container article #art #article_left #h2_6 {
+  background-color: #ffacd0;
+  border: 1px solid #ffacd0;
+}
+
+div .container article #art #article_left #h2_7 {
+  background-color: #cac3f2;
+  border: 1px solid #cac3f2;
+}
+
+div .container article #art #article_left #h2_8 {
+  background-color: #fcb0c0;
+  border: 1px solid #fcb0c0;
+}
+
 div .container article #art #article_left #article_left_1 ul {
   width: 180px;
   height: 200px;
@@ -925,25 +979,6 @@ div .container footer #z_dv4 .z_dv41:hover div {
   border: 4px solid #c7a774;
 }
 
-#zoom {
-  font-size: 40px;
-  color: #c7a774;
-  line-height: 36px;
-}
-
-#car {
-  color: #5e5e5e;
-  margin-left: 10px;
-}
-
-#arrows_1 {
-  color: #5e5e5e;
-}
-
-#phone1 {
-  color: #d00;
-}
-
 #police {
   font-size: 30px;
   color: #f00;
@@ -1248,4 +1283,10 @@ div .container footer #z_dv4 .z_dv41:hover div {
 #toTop > ul li:hover span {
   display: block;
   color: #fff;
+}
+
+#showname {
+  line-height: 36px;
+  display: inline-block;
+  height: 36px;
 }

@@ -49,61 +49,61 @@ btnlogin.onclick=function(){
     // if(!gouxuan){
     //     return false;
     // }
-    //创建异步请求
-    var xhr_3 = new XMLHttpRequest();
-    var _res_3;
-    xhr_3.onreadystatechange=function(){
-        if(xhr_3.readyState === 4 && (xhr_3.status === 200 || xhr_3.status === 304)){
-        // var res = JSON.parse(xhr.responseText);//报错,不是json字符串
-            _res_3 = xhr_3.responseText;
-            try{
-                _res_3 = JSON.parse(_res_3);
-            }catch(err){
-                try{
-                    _res_3 = eval('(' + _res_3 + ')');
-                }catch(e){
-                }
-            }
-            if(_res_3=='yes'){
-            // window.location.href = "http://localhost/zhouzhoudexiangmu/src";
-            welcome.innerHTML = '您好！' + _username + ', 欢迎来到壹药网<button id="logout">退出</button>';
-            // console.log('YES!');      
-            }else if(_res_3=='yn'){
-                // console.log('YN!');
-                alert('密码不正确');
-            }else if(_res_3=='no'){
-                // console.log('NO!');
-                alert('用户名不存在，请注册后登录！');
-            }else{
-                // console.log('ELSE');         
-            }
-        }       
-    }
             // console.log(btn1,666,btn2)
             // console.log(zzflag,999)
-            if(zzflag==true && mdl.checked){
+            if(zzflag==true && mdl.checked && username.value!=''&&password.value!=''){
                 var _username = username.value;
                 var _password = password.value; 
+                // console.log(_username,_password,777)
                 // 如果勾选免登陆 则保存用户和密码到cookie
                 var now = new Date();
                 now.setDate(now.getDate()+14);
-                document.cookie = 'username=' + _username + ';expires=' + now.toString();
-                document.cookie = 'password=' + _password + ';expires=' + now.toString();
-                welcome.innerHTML = '您好！' + _username + ', 欢迎来到壹药网<button id="logout">退出</button>';
-                welcome.style.display = 'block';
-                login.style.display = 'none';
-                last.style.display = 'none';
+                document.cookie = 'username=' + _username + ';expires=' + now.toString()+"; path=/";
+                document.cookie = 'password=' + _password + ';expires=' + now.toString()+"; path=/";
+                //创建异步请求
+                var xhr_3 = new XMLHttpRequest();
+                // console.log(_res_3,666)
+                xhr_3.onreadystatechange=function(){
+                    if(xhr_3.readyState === 4 && (xhr_3.status === 200 || xhr_3.status === 304)){
+                    // var res = JSON.parse(xhr.responseText);//报错,不是json字符串
+                       var _res_3 = xhr_3.responseText;
+                        console.log(_res_3,5666)
+                        try{
+                            _res_3 = JSON.parse(_res_3);
+                        }catch(err){
+                            try{
+                                _res_3 = eval('(' + _res_3 + ')');
+                            }catch(e){
+                            }
+                        }
+                        if(_res_3=='yes'){
+                        // window.location.href = "http://localhost/zhouzhoudexiangmu/src";
+                        welcome.style.display = 'block';
+                        login.style.display = 'none';
+                        last.style.display = 'none';
+                        welcome.innerHTML = '您好！' + _username + ', 欢迎来到壹药网<button id="logout">退出</button><button id="go">进入</button>';
+                        // console.log('YES!');      
+                        }else if(_res_3=='yn'){
+                            // console.log('YN!');
+                            alert('密码不正确');
+                        }else if(_res_3=='no'){
+                            // console.log('NO!');
+                            alert('用户名不存在，请注册后登录！');
+                        }else{
+                            // console.log('ELSE');         
+                        }
+                    }       
+                }
                 xhr_3.open('get','../api/login.php?_username='+_username+'&_password='+_password,true);
-                         console.log(_password,_username,9988);
+                    // console.log(_password,_username,9988);
                 xhr_3.send(null);
-                console.log(_res_3);
+                // console.log(_res_3);
             }else if(put_1.checked == false && zzflag==false){
                 put_1.focus();
             }else if(put_1.checked == true && zzflag==false){
                 alert('请填写完成验证码');
             }
-        }
-            
+        }     
     // 查找cookie
     // 判断是否存在用户/密码
     // 获取cookie
@@ -111,16 +111,17 @@ btnlogin.onclick=function(){
     // 遍历数组
     cookies.forEach(function(item){
         var arr = item.split('=');
-        if(arr[0] === 'username'){
+        if(arr[0] === '_username'){
             welcome.style.display = 'block';
             login.style.display = 'none';
+            last.style.display = 'none';
         }
     });
     // 退出
-    welcome.onclick = function(e){
+    document.onclick = function(e){
         e = e || window.event;
         var target = e.target || e.srcElement;
-        console.log(target);
+        // console.log(target,999);
              
         if(target.id == 'logout'){
             var now = new Date()
@@ -132,7 +133,10 @@ btnlogin.onclick=function(){
             console.log(document.cookie);
                  
             // 手动刷新页面
-            window.location.href = "http://localhost/zhouzhoudexiangmu/src/html/login.html"
+            window.location.href = "http://localhost/zhouzhoudexiangmu/src/html/login.html";
+            }
+            if(target.id == 'go'){
+                window.location.href = "http://localhost/zhouzhoudexiangmu/src";
             }
         }
 });

@@ -11,6 +11,25 @@ a {
   text-decoration: none;
 }
 
+#zoom {
+  font-size: 40px;
+  color: #c7a774;
+  line-height: 36px;
+}
+
+#car {
+  color: #5e5e5e;
+  margin-left: 10px;
+}
+
+#arrows_1 {
+  color: #5e5e5e;
+}
+
+#phone1 {
+  color: #d00;
+}
+
 #reg {
   display: flex;
   margin: 140px auto;

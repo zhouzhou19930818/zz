@@ -8,6 +8,6 @@ require.config({
         jqueryui:'../lib/jquery-ui-1.12.1/jquery-yi'
     },
     shim:{
-        jquery:['jquery']
+        jqueryui:['jquery']
     }
 });
