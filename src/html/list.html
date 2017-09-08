@@ -91,6 +91,7 @@
                     <span>购物车</span>
                 </a>
             </div>
+
             <div id="box_bottom">
                 <div id="box_bottom_l">
                         <h2>维生素钙</h2>
@@ -172,12 +173,12 @@
                             });
                     });
                 </script>
-                <div id="box_bottom_r">
+                <div id="box_bottom_r">   
+                <h4 class="biaoti">维生素钙</h4>
                     <div>
-                        <h4>维生素钙</h4>
                         <div id="box_bottom_r_top">
-                            <div>
-                                <span>品牌:</span>
+                            <div class="di_1">
+                                <span id="tot">品牌:</span>
                                 <div class="selection">
                                     <ul>
                                         <li><a href="#">A</a></li>
@@ -207,50 +208,40 @@
                                         <li><a href="#">Y</a></li>
                                         <li><a href="#">Z</a></li>
                                     </ul>
-                                <button>+多选</button></dd>
+                                <button id="bt">+多选</button></dd>
                             </div>
-                            <!-- <div>
-                                <span>保健功能:</span>
+                            <div class="di_2">
+                                <span id="tot">保健功能:</span>
                                 <div class="selection">
-                                    <ul>
-                                        <li><a href="#">提高免疫</a></li>
-                                        <li><a href="#">骨关节养护</a></li>
-                                        <li><a href="#">延缓衰老</a></li>
-                                        <li><a href="#">缓解疲劳</a></li>
-                                        <li><a href="#">增高助长</a></li>
-                                        <li><a href="#">孕产妇营养</a></li>
-                                        <li><a href="#">美白祛斑</a></li>
-                                        <li><a href="#">肠胃保健</a></li>
-                                        <li><a href="#">心脑血管养护</a></li>
-                                        <li><a href="#">帮助消化</a></li>
-                                        <li><a href="#">护眼明目</a></li>
-                                        <li><a href="#">补铁补血</a></li>
-                                        <li><a href="#">健脑益智</a></li>
-                                        <li><a href="#">改善睡眠</a></li>
-                                    </ul>
-                                <button>+多选</button></dd>
+                                        <div>
+                                            <ul>
+                                                <li><a href="#">提高免疫</a></li>
+                                                <li><a href="#">骨关节养护</a></li>
+                                                <li><a href="#">延缓衰老</a></li>
+                                                <li><a href="#">缓解疲劳</a></li>
+                                                <li><a href="#">增高助长</a></li>
+                                                <li><a href="#">孕产妇营养</a></li>
+                                                <li><a href="#">护眼明目</a></li>
+                                                <li><a href="#">补铁补血</a></li>
+                                                <li><a href="#">健脑益智</a></li>
+                                                <li><a href="#">改善睡眠</a></li>
+                                            </ul>
+                                        </div>
+                                <button id="bt">+多选</button></dd>
+                                </div>
                             </div>
-                            <div>
-                                <span>是否礼盒:</span>
+                            <div class="di_3">
+                                <span id="tot">是否礼盒:</span>
                                 <div class="selection">
                                     <ul>
                                         <li><a href="#">非礼盒</a></li>
                                         <li><a href="#">礼盒</a></li>
                                     </ul>
-                                <button>+多选</button></dd>
+                                <button id="bt">+多选</button></dd>
+                                </div>
                             </div>
-                            <div>
-                                <span>类别:</span>
-                                <div class="selection">
-                                    <ul>
-                                        <li><a href="#">普通营养剂</a></li>
-                                        <li><a href="#">蓝帽子/健字号</a></li>
-                                        <li><a href="#">OTC</a></li>
-                                    </ul>
-                                <button>+多选</button></dd>
-                            </div>
-                            <div>
-                                <span>适宜人群:</span>
+                            <div class="di_4">
+                                <span id="tot">适宜人群:</span>
                                 <div class="selection">
                                     <ul>
                                         <li><a href="#">中老年</a></li>
@@ -262,18 +253,37 @@
                                         <li><a href="#">全部适用</a></li>
                                         <li><a href="#">婴幼儿</a></li>
                                     </ul>
-                                <button>+多选</button></dd>
+                                <button id="bt">+多选</button></dd>
+                                </div>
                             </div>
-                            <div>
-                                
-                            </div> -->
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-    <div id="datalist"></div>
-    <div id="page"></div>
+    <div id="goodslist">
+        <div class="di_5">
+            <ul>
+                <li class="first_li_1"><a href="#"><span  class="first_span">综合</span></a></li>
+                <li class="first_li_2"><a href="#"><span>销量</span></a></li>
+                <li class="first_li_1"><a href="#"><span>评论</span></a></li>
+                <li class="first_li_2"><a href="#"><span>人气</span></a></li>
+                <li class="first_li_1"><a href="#"><span>最新</span></a></li>
+                <li class="first_li_2"><a href="#"><span>价格</span></a></li>
+            </ul>
+        </div>
+        <div id="datalist"></div>
+        <div id="page"></div>
+        <div id="dingwei">
+            <i class="iconfont tub_1" id="tub_1_1">&#xf0005;</i>
+            <i class="iconfont tub_1" id="tub_1_2">&#xf0005;</i>
+            <i class="iconfont tub_1" id="tub_1_3">&#xf0005;</i>
+            <i class="iconfont tub_1" id="tub_1_4">&#xf0005;</i>
+            <i class="iconfont" id="tub_2">&#xe52e;</i>
+            <i class="iconfont" id="tub_3">&#xe52d;</i>
+        </div>
+    </div>
+    
     <script src="../js/list.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/zititubiao.css" />
     <link rel="stylesheet" type="text/css" href="../css/list.css" />

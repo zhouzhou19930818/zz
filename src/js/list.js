@@ -4,8 +4,92 @@ document.addEventListener('DOMContentLoaded',function(){
     var box = document.querySelector('#box_bottom_r');
     var page = document.querySelector('#page');
     var datalist = document.querySelector('#datalist');
+    var list_price_sheng= document.querySelectorAll('.first_li_1');
+    var list_price_jiang = document.querySelectorAll('.first_li_2');
     var pageNo = 1;
     var qty = 10;
+    var num =1;
+    //价格排序
+    list_price_sheng.forEach(function(ite,idx){
+            // console.log(list_price_sheng.length)
+        ite.onclick=function(){console.log(888)
+            var xhr_6 = new XMLHttpRequest();
+            xhr_6.onload=function(){
+                if(xhr_6.readyState === 4 && (xhr_6.status === 200 || xhr_6.status === 304)){
+                    // console.log(4434343)
+                    // var res = JSON.parse(xhr_6.responseText);//报错,不是json字符串
+                    var _res_6 = xhr_6.responseText;
+                    // console.log(_res_6,9388)
+                    try{
+                        _res_6 = JSON.parse(_res_6);
+                    }catch(err){
+                        try{
+                            _res_6 = eval('(' + _res_6 + ')');
+                        }catch(e){
+                        }
+                    }
+
+                }
+                // console.log(_res_6)
+                     
+                    datalist.innerHTML =_res_6.data.map(function(item,idex){
+                        return `
+                        <ul>
+                            <h4>${item.name}</h4>
+                            <img src="${item.imgurl}">
+                            <p><span>${item.price}</span></p>
+                            <div><span>-</span><input value="${num}"><span>+</span><button>加入购物车</button></div>
+                        </ul>
+                        `
+                    }).join('');
+            }
+            xhr_6.open('get','../api/pricepaixusheng.php?className=first_li_1',true);
+            xhr_6.send(null);     
+        }
+    });
+        list_price_jiang.forEach(function(ie,idx){
+                // console.log(list_price_jiang.length)
+            ie.onclick=function(){
+                // console.log(777)
+                var xhr_5 = new XMLHttpRequest();
+                xhr_5.onload=function(){
+                        // console.log(434343)
+                    if(xhr_5.readyState === 4 && (xhr_5.status === 200 || xhr_5.status === 304)){
+                             
+                        // var res = JSON.parse(xhr_5.responseText);//报错,不是json字符串
+                             
+                        var _res_5 = xhr_5.responseText;
+                        // console.log(_res_5);
+                        
+                        try{
+                            _res_5 = JSON.parse(_res_5);
+                        }catch(err){
+                            try{
+                                _res_5 = eval('(' + _res_5 + ')');
+                            }catch(e){
+                            }
+                        }
+                    }
+                    // console.log(this+'70');
+                         
+                    // console.log(_res_5);
+                    datalist.innerHTML =_res_5.data.map(function(item,idex){
+                         // console.log(_res_5.data,6767)
+                        return `
+                        <ul>
+                            <h4>${item.name}</h4>
+                            <img src="${item.imgurl}">
+                            <p><span>${item.price}</span></p>
+                            <div><span>-</span><input value="${num}"><span>+</span><button>加入购物车</button></div>
+                        </ul>
+                        `
+                    }).join('');
+                }
+                xhr_5.open('get','../api/pricepaixujiang.php?class_1=first_li_2',true);
+                xhr_5.send(null);
+            }
+        });
+
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange=function(){
             if(xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)){
@@ -30,7 +114,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     span.innerText = i;
                     page.appendChild(span);
                 }
-                console.log(_res_1.data)
+                // console.log(_res_1.data)
                 // console.log(_res)
                      
                 datalist.innerHTML =_res_1.data.map(function(item,idex){
@@ -40,6 +124,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         <h4>${item.name}</h4>
                         <img src="${item.imgurl}">
                         <p><span>${item.price}</span></p>
+                        <div><span>-</span><input value="${num}"><span>+</span><button>加入购物车</button></div>
                     </ul>
                     `
                 }).join('');
@@ -69,7 +154,7 @@ document.addEventListener('DOMContentLoaded',function(){
             }
             if(target.tagName.toLowerCase() === 'span'){
                 pageNo = target.innerText;
-                console.log(pageNo,999,)    
+                // console.log(pageNo,999,)    
                 xhr.open('get',`../api/data/list.php?pageNo=${pageNo}&qty=${qty}`,true);
                 // console.log('../api/data/list.php?pageNo=${pageNo}&qty=${qty}');
                      
