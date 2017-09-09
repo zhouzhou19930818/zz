@@ -309,35 +309,35 @@ a {
   flex-wrap: wrap;
 }
 
-#datalist > ul {
+#datalist > div {
   margin: 20px 8px;
 }
 
-#datalist > ul > div {
+#datalist > div > div {
   border: 1px solid #e5e5e5;
   height: 28px;
   border-radius: 2px;
 }
 
-#datalist > ul > div > span {
+#datalist > div > div > span {
   display: inline-block;
   margin-top: 4px;
   width: 19px;
   height: 19px;
 }
 
-#datalist > ul > div > span:first-child {
+#datalist > div > div > span:first-child {
   margin-left: 20px;
   cursor: pointer;
 }
 
-#datalist > ul > div > span:nth-of-type(2) {
+#datalist > div > div > span:nth-of-type(2) {
   margin-left: 20px;
   padding-right: 10px;
   cursor: pointer;
 }
 
-#datalist > ul > div > button {
+#datalist > div > div > button {
   height: 24px;
   background-color: #fff;
   color: #ff6666;
@@ -348,7 +348,7 @@ a {
   margin-bottom: -5px;
 }
 
-#datalist > ul > div > input {
+#datalist > div > div > input {
   border: 1px solid #e6e6e6;
   margin-top: 4px;
   border-top: none;
@@ -360,15 +360,15 @@ a {
   text-align: center;
 }
 
-#datalist > ul > p {
+#datalist > div > p {
   color: #f00;
 }
 
-#datalist > ul > p::before {
+#datalist > div > p::before {
   content: "￥";
 }
 
-#datalist > ul > h4 {
+#datalist > div > h4 {
   height: 20px;
   line-height: 20px;
   overflow: hidden;
@@ -377,7 +377,7 @@ a {
   font-weight: 100;
 }
 
-#datalist > ul > h4:hover {
+#datalist > div > h4:hover {
   color: #f00;
 }
 

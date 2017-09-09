@@ -4,15 +4,17 @@ document.addEventListener('DOMContentLoaded',function(){
     var box = document.querySelector('#box_bottom_r');
     var page = document.querySelector('#page');
     var datalist = document.querySelector('#datalist');
+    var input = document.getElementsByClassName('input_1');
     var list_price_sheng= document.querySelectorAll('.first_li_1');
     var list_price_jiang = document.querySelectorAll('.first_li_2');
     var pageNo = 1;
     var qty = 10;
-    var num =1;
+
     //价格排序
     list_price_sheng.forEach(function(ite,idx){
             // console.log(list_price_sheng.length)
-        ite.onclick=function(){console.log(888)
+        ite.onclick=function(){
+            // console.log(888)
             var xhr_6 = new XMLHttpRequest();
             xhr_6.onload=function(){
                 if(xhr_6.readyState === 4 && (xhr_6.status === 200 || xhr_6.status === 304)){
@@ -34,12 +36,13 @@ document.addEventListener('DOMContentLoaded',function(){
                      
                     datalist.innerHTML =_res_6.data.map(function(item,idex){
                         return `
-                        <ul>
+                        <div id = "${item.id}">
                             <h4>${item.name}</h4>
                             <img src="${item.imgurl}">
                             <p><span>${item.price}</span></p>
-                            <div><span>-</span><input value="${num}"><span>+</span><button>加入购物车</button></div>
-                        </ul>
+                            <div><span id="jian">-</span><input  class="input_1" placeholder='1'><span id="jia">+</span><button id="gocar">加入购物车</button>
+                            </div>
+                        </div>
                         `
                     }).join('');
             }
@@ -76,13 +79,14 @@ document.addEventListener('DOMContentLoaded',function(){
                     datalist.innerHTML =_res_5.data.map(function(item,idex){
                          // console.log(_res_5.data,6767)
                         return `
-                        <ul>
+                        <div id = "${item.id}">
                             <h4>${item.name}</h4>
                             <img src="${item.imgurl}">
                             <p><span>${item.price}</span></p>
-                            <div><span>-</span><input value="${num}"><span>+</span><button>加入购物车</button></div>
-                        </ul>
-                        `
+                            <div><span id="jian">-</span><input  class="input_1" placeholder='1'><span id="jia">+</span><button id="gocar">加入购物车</button>
+                            </div>
+                        </div>
+                        `                    
                     }).join('');
                 }
                 xhr_5.open('get','../api/pricepaixujiang.php?class_1=first_li_2',true);
@@ -115,18 +119,18 @@ document.addEventListener('DOMContentLoaded',function(){
                     page.appendChild(span);
                 }
                 // console.log(_res_1.data)
-                // console.log(_res)
-                     
+                // console.log(_res)       
                 datalist.innerHTML =_res_1.data.map(function(item,idex){
                      // console.log(item.name,999)
                     return `
-                    <ul>
+                    <div id = "${item.id}">
                         <h4>${item.name}</h4>
                         <img src="${item.imgurl}">
                         <p><span>${item.price}</span></p>
-                        <div><span>-</span><input value="${num}"><span>+</span><button>加入购物车</button></div>
-                    </ul>
-                    `
+                        <div><span id="jian">-</span><input  class="input_1" placeholder='1'><span id="jia">+</span><button id="gocar">加入购物车</button>
+                        </div>
+                    </div>
+                        `
                 }).join('');
             }
         }
@@ -163,5 +167,29 @@ document.addEventListener('DOMContentLoaded',function(){
         }
         // &'password='+password    
 // }
-
+// 数量加减//加入购物车
+    var num =1;
+    datalist.onclick=function(event){
+        console.log(7777)
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        // console.log(target,77897)
+        // for(var k=0;k<input.length;k++){
+        // var num =1;
+            if(target.id == 'jian' && num>0){  
+             target.nextElementSibling.placeholder=--num;
+            }
+        // }
+        // var num;
+        if(target.id== 'jia'){
+            if(target.id == 'jia'){  
+             target.previousElementSibling.placeholder=++num;
+            }
+        }
+        if(target.id== 'gocar'){
+             window.location.href = "http://localhost/zhouzhoudexiangmu/src/html/goods.html";
+        }
+    }
+    
+    
 });
